@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functies</title>
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+
+		let controleAantal = getal => {
+			if (getal == null) {
+				document.write ('U heeft geannuleerd.');
+				getal = -1;
+			}
+			else if (getal.length == 0) {
+				document.write ('U heeft niets ingegeven.');
+				getal = -1;
+			}
+			else if (isNaN(getal)) {
+				document.write ('Dit is geen correcte ingave');
+				getal =-1;
+			}
+			return getal;
+		}
+
+		let controleGetal = getal => {
+			let getalRet = getal;
+			if (getal == null | isNaN(getal) |getal.length == 0){
+				getalRet = 'fout';
+			} 
+			return getalRet;
+		}
+
+		let getallen = new Array();
+
+		let aantal = prompt('Hoeveel getallen wil je ingeven?');
+		aantal = controleAantal(aantal);
+
+		if (aantal > 0) {
+			for	(let i = 0; i < aantal;i++) {
+				let cijfer = prompt ('Geef getal ' + (i+1) + ' in.');
+				cijfer = controleGetal(cijfer);
+				getallen.push(cijfer);
+			}
+		}
+		document.write(getallen);
+		
+
+	</script>
+</body>
+</html>

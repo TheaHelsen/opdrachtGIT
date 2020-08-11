@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Herhalingslussen array</title>
+</head>
+<body>
+	<script type="text/javascript">
+		let aantal = prompt('Hoeveel automerken wil je ingeven?');
+
+		let merken = [];
+		for(let i=0;i<aantal;i++){
+			merken[i] = prompt("Geef merk nr "+ (i+1) +" in.");
+		}
+
+		document.write (`<p>  U gaf volgende merken in : </p>`);
+
+		for(i=0;i<aantal;i++) {
+			document.write(`<p> ${i+1}: ${merken[i]} </p>`);
+		}
+		
+	</script>
+</body>
+</html>
